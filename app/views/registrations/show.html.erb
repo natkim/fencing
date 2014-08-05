@@ -1,0 +1,13 @@
+<h1>Registration #<%= @registration.id %></h1>
+
+<div>
+  <strong>User</strong>:<br />
+  <p><%= @registration.user_id %></p>
+</div>
+<div>
+  <strong>Tournament</strong>:<br />
+  <p><%= @registration.tournament_id %></p>
+</div>
+
+<a href="/registrations/<%= @registration.id %>/edit">Edit</a> |
+<a href="/registrations/<%= @registration.id %>/destroy">Destroy</a>

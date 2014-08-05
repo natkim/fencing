@@ -1,0 +1,29 @@
+<h1>Registrations</h1>
+
+<p><a href="/new_registration">Add a New Registration</a></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Tournament</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @registrations.each do |registration| %>
+    <tr>
+          <td><%= registration.user_id %></td>
+          <td><%= registration.tournament_id %></td>
+          <td><a href="/registrations/<%= registration.id %>">Show</a>
+        </td>
+      <td><a href="/registrations/<%= registration.id %>/edit">Edit</a></td>
+      <td><a href="/registrations/<%= registration.id %>/destroy">Destroy</a></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

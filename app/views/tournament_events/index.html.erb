@@ -1,0 +1,29 @@
+<h1>Tournament events</h1>
+
+<p><a href="/new_tournament_event">Add a New Tournament Event</a></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tournament</th>
+      <th>Event</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @tournament_events.each do |tournament_event| %>
+    <tr>
+          <td><%= tournament_event.tournament_id %></td>
+          <td><%= tournament_event.event_id %></td>
+          <td><a href="/tournament_events/<%= tournament_event.id %>">Show</a>
+        </td>
+      <td><a href="/tournament_events/<%= tournament_event.id %>/edit">Edit</a></td>
+      <td><a href="/tournament_events/<%= tournament_event.id %>/destroy">Destroy</a></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

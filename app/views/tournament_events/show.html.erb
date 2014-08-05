@@ -1,0 +1,13 @@
+<h1>Tournament Event #<%= @tournament_event.id %></h1>
+
+<div>
+  <strong>Tournament</strong>:<br />
+  <p><%= @tournament_event.tournament_id %></p>
+</div>
+<div>
+  <strong>Event</strong>:<br />
+  <p><%= @tournament_event.event_id %></p>
+</div>
+
+<a href="/tournament_events/<%= @tournament_event.id %>/edit">Edit</a> |
+<a href="/tournament_events/<%= @tournament_event.id %>/destroy">Destroy</a>

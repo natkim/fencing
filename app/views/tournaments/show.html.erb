@@ -1,0 +1,21 @@
+<h1>Tournament #<%= @tournament.id %></h1>
+
+<div>
+  <strong>Location</strong>:<br />
+  <p><%= @tournament.location %></p>
+</div>
+<div>
+  <strong>Date</strong>:<br />
+  <p><%= @tournament.date %></p>
+</div>
+<div>
+  <strong>Hotel</strong>:<br />
+  <p><%= @tournament.hotel %></p>
+</div>
+<div>
+  <strong>Travel</strong>:<br />
+  <p><%= @tournament.travel %></p>
+</div>
+
+<a href="/tournaments/<%= @tournament.id %>/edit">Edit</a> |
+<a href="/tournaments/<%= @tournament.id %>/destroy">Destroy</a>

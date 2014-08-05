@@ -1,0 +1,21 @@
+<h1>Editing Event #<%= @event.id %></h1>
+
+<form action="/events/<%= @event.id %>/update">
+  <div>
+    <label for="result">result</label><br />
+    <input id="result" name="result" value="<%= @event.result  %>" type="text" />
+  </div>
+  <div>
+    <label for="weapons">weapons</label><br />
+    <input id="weapons" name="weapons" value="<%= @event.weapons  %>" type="text" />
+  </div>
+  <div>
+    <label for="division">division</label><br />
+    <input id="division" name="division" value="<%= @event.division  %>" type="text" />
+  </div>
+  <div>
+    <input type="submit">
+  </div>
+</form>
+
+

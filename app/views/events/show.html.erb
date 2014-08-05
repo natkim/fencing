@@ -1,0 +1,17 @@
+<h1>Event #<%= @event.id %></h1>
+
+<div>
+  <strong>Result</strong>:<br />
+  <p><%= @event.result %></p>
+</div>
+<div>
+  <strong>Weapons</strong>:<br />
+  <p><%= @event.weapons %></p>
+</div>
+<div>
+  <strong>Division</strong>:<br />
+  <p><%= @event.division %></p>
+</div>
+
+<a href="/events/<%= @event.id %>/edit">Edit</a> |
+<a href="/events/<%= @event.id %>/destroy">Destroy</a>

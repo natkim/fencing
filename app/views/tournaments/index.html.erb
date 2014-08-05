@@ -1,0 +1,33 @@
+<h1>Tournaments</h1>
+
+<p><a href="/new_tournament">Add a New Tournament</a></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Location</th>
+      <th>Date</th>
+      <th>Hotel</th>
+      <th>Travel</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @tournaments.each do |tournament| %>
+    <tr>
+          <td><%= tournament.location %></td>
+          <td><%= tournament.date %></td>
+          <td><%= tournament.hotel %></td>
+          <td><%= tournament.travel %></td>
+          <td><a href="/tournaments/<%= tournament.id %>">Show</a>
+        </td>
+      <td><a href="/tournaments/<%= tournament.id %>/edit">Edit</a></td>
+      <td><a href="/tournaments/<%= tournament.id %>/destroy">Destroy</a></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

@@ -1,0 +1,25 @@
+<h1>Editing Tournament #<%= @tournament.id %></h1>
+
+<form action="/tournaments/<%= @tournament.id %>/update">
+  <div>
+    <label for="location">location</label><br />
+    <input id="location" name="location" value="<%= @tournament.location  %>" type="text" />
+  </div>
+  <div>
+    <label for="date">date</label><br />
+    <input id="date" name="date" value="<%= @tournament.date  %>" type="text" />
+  </div>
+  <div>
+    <label for="hotel">hotel</label><br />
+    <input id="hotel" name="hotel" value="<%= @tournament.hotel  %>" type="text" />
+  </div>
+  <div>
+    <label for="travel">travel</label><br />
+    <input id="travel" name="travel" value="<%= @tournament.travel  %>" type="text" />
+  </div>
+  <div>
+    <input type="submit">
+  </div>
+</form>
+
+
