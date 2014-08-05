@@ -12,6 +12,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  
+<div>
+  <% if session['user_id'] %>
+    <% u = User.find_by_id(session['user_id']) %>
+    You're signed in as <%= u.name %>
+    <a href="/sessions/destroy">Sign Out</a>
+  <% else %>
+    <a href="/sessions/new">Sign In></a>
+  <% end %>
+</div>
 
 <%= yield %>
 

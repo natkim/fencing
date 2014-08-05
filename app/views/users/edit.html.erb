@@ -5,14 +5,22 @@
     <label for="name">name</label><br />
     <input id="name" name="name" value="<%= @user.name  %>" type="text" />
   </div>
+  <br>
   <div>
     <label for="email">email</label><br />
     <input id="email" name="email" value="<%= @user.email  %>" type="text" />
   </div>
+  <br>
   <div>
     <label for="password">password</label><br />
     <input id="password" name="password" value="<%= @user.password  %>" type="text" />
   </div>
+  <br>
+  <div>
+        <label for="password_confirmation">password_confirmation</label><br />
+        <input id="password_confirmation" name="password_confirmation" type="password" />
+      </div>
+  <br>
   <div>
     <input type="submit">
   </div>

@@ -17,10 +17,9 @@
       <tbody>
       <% @users.each do |user| %>
         <tr>
-              <td><%= user.name %></td>
-          <br>
-              <td><a href="/users/<%= user.id %>">Show</a>| </td>
-          <td><a href="/users/<%= user.id %>/edit">Edit</a>|</td>
+              <td><%= user.name %> &nbsp;</td>
+              <td><a href="/users/<%= user.id %>">Show</a>  &nbsp;</td>
+          <td><a href="/users/<%= user.id %>/edit">Edit</a> &nbsp;</td>
           <td><a href="/users/<%= user.id %>/destroy">Destroy</a></td>
         </tr>
       <% end %>

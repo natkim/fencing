@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  
+  get '/sessions/new' => 'sessions#new'
+  get '/sessions/create' => 'sessions#create'
+  get '/sessions/destroy' => 'sessions#destroy'
+  
   # Routes for the Event resource:
   # CREATE
   get '/new_event' => 'events#new'
