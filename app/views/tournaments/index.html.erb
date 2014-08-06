@@ -1,33 +1,91 @@
-<h1>Tournaments</h1>
+<div class="container">
 
-<p><a href="/new_tournament">Add a New Tournament</a></p>
+ <ul class="nav nav-tabs" role="tablist">
+  <li class="active"><a href="#">Tournaments</a></li>
+  <li><a href="#">Results</a></li>
+  <li><a href="#">Notes</a></li>
+ </ul>
+<br>
+<br>
+  <h2>Tournaments</h2>
+  <br>
 
-<table>
-  <thead>
-    <tr>
-      <th>Location</th>
-      <th>Date</th>
-      <th>Hotel</th>
-      <th>Travel</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+<% @tournaments.each do |tournament| %>
+  <div class="row">
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <div class="caption">
+          <h3><td><a href="/tournaments/<%= tournament.id %>/edit"><%= tournament.title %></a></td></h3>
+          <p>Location: <td><%= tournament.location %></td></p>
+          <p>Date: <td><%= tournament.date %></td></p>
+          <p><a href="/tournaments/<%= tournament.id %>" class="btn btn-primary" role="button">View</a></p>
+          <td><a href="/tournaments/<%= tournament.id %>/destroy">Destroy</a></td>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <div class="caption">
+          <h3><td><a href="/tournaments/<%= tournament.id %>/edit"><%= tournament.title %></a></td></h3>
+          <p>Location: <td><%= tournament.location %></td></p>
+          <p>Date: <td><%= tournament.date %></td></p>
+          <p><a href="/tournaments/<%= tournament.id %>" class="btn btn-primary" role="button">View</a></p>
+          <td><a href="/tournaments/<%= tournament.id %>/destroy">Destroy</a></td>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <div class="caption">
+         <h3><td><a href="/tournaments/<%= tournament.id %>/edit"><%= tournament.title %></a></td></h3>
+          <p>Location: <td><%= tournament.location %></td></p>
+          <p>Date: <td><%= tournament.date %></td></p>
+          <p><a href="/tournaments/<%= tournament.id %>" class="btn btn-primary" role="button">View</a></p>
+          <td><a href="/tournaments/<%= tournament.id %>/destroy">Destroy</a></td>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <tbody>
-  <% @tournaments.each do |tournament| %>
-    <tr>
-          <td><%= tournament.location %></td>
-          <td><%= tournament.date %></td>
-          <td><%= tournament.hotel %></td>
-          <td><%= tournament.travel %></td>
-          <td><a href="/tournaments/<%= tournament.id %>">Show</a>
-        </td>
-      <td><a href="/tournaments/<%= tournament.id %>/edit">Edit</a></td>
-      <td><a href="/tournaments/<%= tournament.id %>/destroy">Destroy</a></td>
-    </tr>
+  <div class="row">
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <div class="caption">
+          <h3><td><a href="/tournaments/<%= tournament.id %>/edit"><%= tournament.title %></a></td></h3>
+          <p>Location: <td><%= tournament.location %></td></p>
+          <p>Date: <td><%= tournament.date %></td></p> 
+          <p><a href="/tournaments/<%= tournament.id %>" class="btn btn-primary" role="button">View</a></p>
+          <td><a href="/tournaments/<%= tournament.id %>/destroy">Destroy</a></td>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <div class="caption">
+          <h3><td><a href="/tournaments/<%= tournament.id %>/edit"><%= tournament.title %></a></td></h3>
+          <p>Location: <td><%= tournament.location %></td></p>
+          <p>Date: <td><%= tournament.date %></td></p> 
+          <p><a href="/tournaments/<%= tournament.id %>" class="btn btn-primary" role="button">View</a></p>
+          <td><a href="/tournaments/<%= tournament.id %>/destroy">Destroy</a></td>
+        </div>
+      </div>
+    </div>
   <% end %>
-  </tbody>
-</table>
-
+    
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <div class="caption">
+          <br>
+          <br>
+          <br>
+          <br>
+          <p class="add"><a href="/new_tournament" class="btn btn-primary" role="button">Add</a></p>
+          <br>
+          <br>
+          <br>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>

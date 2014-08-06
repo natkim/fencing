@@ -1,30 +1,52 @@
 <div class="container">
-  <div class="row">
-    <h1>New User</h1>
-
+    <div class="new_user">
+      <h1>New User</h1>
+    </div>
+    
     <form action="/create_user">
-      <div>
+    <div class="row">  
+      <div class="form-group">
+        <div class="col-md-3">
         <label for="name">name</label><br />
-        <input id="name" name="name" type="text" />
+        <input id="name" name="name" type="text" class="form-control" placeholder="Harsha"/>
       </div>
+    </div>
+  </div>
       <br>
-      <div>
+      
+  <div class="row">
+    <div class="form-group">
+      <div class="col-md-3">
         <label for="email">email</label><br />
-        <input id="email" name="email" type="text" />
+        <input id="email" name="email" type="text" class="form-control" placeholder="imsocool@tennis.com">
       </div>
+    </div>
+  </div>
+
+      <br>
+    <div class="row">
+      <div class="form-group">
+        <div class="col-md-3">
+          <label for="password">password</label><br />
+          <input id="password" name="password" type="password" class="form-control" placeholder="password">
+        </div>
+      </div>
+    </div>
+
+      <br>
+
+    <div class="row">
+      <div class="form-group">
+        <div class="col-md-3">
+          <label for="password_confirmation">password_confirmation</label><br />
+          <input id="password_confirmation" name="password_confirmation" type="password" class="form-control" placeholder="confirm password">
+        </div>
+      </div>
+     </div>
+          
       <br>
       <div>
-        <label for="password">password</label><br />
-        <input id="password" name="password" type="password" />
-      </div>
-      <br>
-      <div>
-        <label for="password_confirmation">password_confirmation</label><br />
-        <input id="password_confirmation" name="password_confirmation" type="password" />
-      </div>
-      <br>
-      <div>
-        <input type="submit">
+        <button type="submit" class="btn btn-default">Submit</button>
       </div>
     </form>
   </div>

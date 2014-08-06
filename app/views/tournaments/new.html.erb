@@ -1,24 +1,151 @@
 <h1>New Tournament</h1>
 
+<br>
+<br>
 <form action="/create_tournament">
-  <div>
-    <label for="location">location</label><br />
-    <input id="location" name="location" type="text" />
-  </div>
-  <div>
-    <label for="date">date</label><br />
-    <input id="date" name="date" type="text" />
-  </div>
-  <div>
-    <label for="hotel">hotel</label><br />
-    <input id="hotel" name="hotel" type="text" />
-  </div>
-  <div>
-    <label for="travel">travel</label><br />
-    <input id="travel" name="travel" type="text" />
-  </div>
-  <div>
-    <input type="submit">
-  </div>
-</form>
+  
+  <div class="container">
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Tournament Title">
+      </div><!-- /input-group -->
+    </div><!-- /.col-lg-6 -->
 
+    <div class="col-lg-3">
+      <div class="input-group">
+        <span class="input-group-addon">
+          <input type="checkbox">
+        </span>
+        <input type="text" class="form-control" placeholder="Paid?">  
+      </div><!-- /input-group -->
+    </div><!-- /.col-lg-3 -->
+
+    <div class="col-lg-3">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Confirmation #">
+      </div><!-- /input-group -->
+    </div><!-- /.col-lg-3 -->
+   </div><!-- /.row --> 
+    </div>
+
+    <br>
+    <br>
+
+    <div class="container">
+      <div class="row">
+       <div class="input-group">
+        <div class="input-group-btn">
+          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Types
+            <select name="type">
+              <option value="local">Local </option>
+              <option value="regional">Regional </option>
+              <option value="national">National</option>
+              <option value="international">International</option>
+            </select>
+          </button>
+        </div><!-- /btn-group -->
+       </div>   
+     </div><!-- /.row -->
+    </div>
+
+    <br>
+    <br>
+
+  <div class="container">
+    <div class="row">
+     <div class="col-lg-4">
+       <div class="input-group">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button">Event(s)</button>
+        </span>
+        <input type="text" class="form-control" placeholder="eg. cadet epee">
+      </div><!-- /input-group -->
+     </div><!-- /col-lg-4 -->
+
+      <div class="col-lg-4">
+
+     </div><!-- /col-lg-4 -->
+
+      <div class="col-lg-4">
+       <div class="input-group">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button">Date(s)</button>
+        </span>
+        <input type="text" class="form-control" placeholder="Month/Day/Year">
+      </div><!-- /input-group -->
+        <a href="">calender</a>
+     </div><!-- /col-lg-4 -->
+   </div><!-- /.row -->
+    </div>
+
+
+
+    <div class="container">
+      <div class="row">
+     <div class="col-lg-4">
+       <div class="input-group">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button"> + </button>
+        </span>
+        <input type="text" class="form-control" placeholder="Additional Events">
+      </div><!-- /input-group -->
+     </div>
+
+      <div class="col-lg-4">
+
+     </div>
+
+      <div class="col-lg-4">
+       <div class="input-group">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button"> + </button>
+        </span>
+        <input type="text" class="form-control" placeholder="Additional Dates">
+      </div><!-- /input-group -->
+     </div>
+   </div><!-- /.row -->
+    </div>
+
+    <br>
+    <br>
+
+    <div class="container">
+       <div class="input-group">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button">Location:</button>
+        </span>
+        <input type="text" class="form-control">
+      </div><!-- /input-group -->
+    </div>
+
+    <br>
+    <br>
+
+    <div class="container">
+    <div class="input-group">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button"> + Hotel</button>
+        </span>
+      </div><!-- /input-group -->
+    </div>
+  <br>
+  <div class="container">
+    <div class="input-group">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button"> + Travel</button>
+        </span>
+      </div><!-- /input-group -->
+  </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="container">
+      <div class="row">
+      <p><a href="/create_tournament" class="btn btn-primary btn-lg" role="button">Add</a></p>
+      </div>
+    </div>
+</form>
