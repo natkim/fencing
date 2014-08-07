@@ -5,11 +5,10 @@ class CreateTournaments < ActiveRecord::Migration
       t.string :date
       t.string :hotel
       t.string :travel
-
-      belongs_to :registration
-      belongs_to :tournament_events
       
       t.timestamps
     end
+     belongs_to :registration
+     belongs_to :tournament_events
   end
 end

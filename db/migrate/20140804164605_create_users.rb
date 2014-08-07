@@ -5,9 +5,9 @@ class CreateUsers < ActiveRecord::Migration
       t.string :email
       t.string :password
       
-      belongs_to :registration
 
       t.timestamps
     end
+    belongs_to :registration
   end
 end
