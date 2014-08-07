@@ -9,6 +9,4 @@ class CreateTournaments < ActiveRecord::Migration
       t.timestamps
     end
   end
-   belongs_to :registration
-   belongs_to :tournament_events
 end
