@@ -8,6 +8,6 @@ class CreateUsers < ActiveRecord::Migration
 
       t.timestamps
     end
-    belongs_to :registration
   end
+   belongs_to :registration
 end

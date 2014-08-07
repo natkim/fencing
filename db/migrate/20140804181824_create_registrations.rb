@@ -6,7 +6,7 @@ class CreateRegistrations < ActiveRecord::Migration
 
       t.timestamps
     end
+  end
       has_many :users
       has_many :tournaments
-  end
 end

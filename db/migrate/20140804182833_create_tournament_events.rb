@@ -6,7 +6,7 @@ class CreateTournamentEvents < ActiveRecord::Migration
 
       t.timestamps
     end
+  end
       has_many :events
       has_many :tournam
-  end
 end
