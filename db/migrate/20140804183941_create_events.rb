@@ -4,6 +4,7 @@ class CreateEvents < ActiveRecord::Migration
       t.string :result
       t.string :weapons
       t.string :division
+      t.integer :tournament_id
 
       t.timestamps
     end

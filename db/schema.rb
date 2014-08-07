@@ -11,15 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140806142700) do
+ActiveRecord::Schema.define(version: 20140804183941) do
 
   create_table "events", force: true do |t|
     t.string   "result"
     t.string   "weapons"
     t.string   "division"
+    t.integer  "tournament_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "tournament_id"
   end
 
   create_table "registrations", force: true do |t|
@@ -41,21 +41,23 @@ ActiveRecord::Schema.define(version: 20140806142700) do
     t.string   "date"
     t.string   "hotel"
     t.string   "travel"
-    t.datetime "created_at"
-    t.datetime "updated_at"
     t.string   "title"
     t.boolean  "paid"
     t.string   "confirmation"
+    t.string   "type"
+    t.string   "event"
     t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", force: true do |t|
     t.string   "name"
     t.string   "email"
     t.string   "password"
+    t.string   "password_digest"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "password_digest"
   end
 
 end

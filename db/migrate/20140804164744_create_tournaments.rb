@@ -5,6 +5,12 @@ class CreateTournaments < ActiveRecord::Migration
       t.string :date
       t.string :hotel
       t.string :travel
+      t.string :title
+      t.boolean :paid
+      t.string :confirmation
+      t.string :type
+      t.string :event
+      t.integer :user_id
       
       t.timestamps
     end
