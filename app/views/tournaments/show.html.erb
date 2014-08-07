@@ -1,13 +1,29 @@
-<h1>Tournament #<%= @tournament.id %></h1>
+  <div class="container">
+    <div class="page-header">
+      <h1><%= @tournament.title %> <small><%= @tournament.location %> | <%= @tournament.date %></small></h1>
+    </div>
 
-<div>
-  <strong>Location</strong>:<br />
-  <p><%= @tournament.location %></p>
-</div>
-<div>
-  <strong>Date</strong>:<br />
-  <p><%= @tournament.date %></p>
-</div>
+      <div class="caption">
+        <%= @tournament.paid %><h3>Paid</h3>
+      </div>
+      
+      <div class="caption">
+        <h3>Confirmation #:</h3>
+        <h4><%= @tournament.confirmation %></h4>
+      </div>
+
+
+      <div class="caption">
+        <h3>Event(s):</h3>
+        <h4><%= @tournament.event %></h4>
+      </div>
+
+      <div class="caption">
+        <h3>Type:</h3>
+        <h4><%= @tournament.type %></h4>
+      </div>
+    
+  </div>
 
 <div>
   <strong>Hotel</strong>:<br />
@@ -19,4 +35,5 @@
 </div>
 
 <a href="/tournaments/<%= @tournament.id %>/edit">Edit</a> |
-<a href="/tournaments/<%= @tournament.id %>/destroy">Destroy</a>
+<a href="/tournaments/<%= @tournament.id %>/destroy">Destroy</a> |
+<a href="/tournaments">You're Tournaments</a>

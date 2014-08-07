@@ -13,6 +13,11 @@ class TournamentsController < ApplicationController
 
   def create
     @tournament = Tournament.new
+    @tournament.title = params[:title]
+    @tournament.paid = params[:paid]
+    @tournament.confirmation = params[:tournament]
+    @tournament.event = params[:event]
+    @tournament.type = params[:type]
     @tournament.location = params[:location]
     @tournament.date = params[:date]
     @tournament.hotel = params[:hotel]
