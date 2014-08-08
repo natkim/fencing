@@ -14,12 +14,11 @@ class TournamentsController < ApplicationController
   def create
     @tournament = Tournament.new
     @tournament.title = params[:title]
+    @tournament.confirmation = params[:confirmation]
     @tournament.paid = params[:paid]
-    @tournament.confirmation = params[:tournament]
-    @tournament.event = params[:event]
-    @tournament.type = params[:type]
     @tournament.location = params[:location]
     @tournament.date = params[:date]
+    @tournament.event = params[:event]
     @tournament.hotel = params[:hotel]
     @tournament.travel = params[:travel]
 
@@ -36,8 +35,12 @@ class TournamentsController < ApplicationController
 
   def update
     @tournament = Tournament.find_by(id: params[:id])
+    @tournament.title = params[:title]
     @tournament.location = params[:location]
     @tournament.date = params[:date]
+    @tournament.paid = params[:paid]
+    @tournament.confirmation = params[:confirmation]
+    @tournament.event = params[:event]
     @tournament.hotel = params[:hotel]
     @tournament.travel = params[:travel]
 

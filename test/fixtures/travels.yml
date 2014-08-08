@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  paid: false
+  confirmation: MyString
+  airline: MyString
+  flight: MyString
+  destination: MyString
+  tournament_id: 1
+
+two:
+  paid: false
+  confirmation: MyString
+  airline: MyString
+  flight: MyString
+  destination: MyString
+  tournament_id: 1

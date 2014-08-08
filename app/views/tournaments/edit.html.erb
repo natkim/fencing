@@ -1,25 +1,312 @@
-<h1>Editing Tournament #<%= @tournament.id %></h1>
+<h1>Edit <%= @tournament.title %></h1>
 
+<br>
+<br>
 <form action="/tournaments/<%= @tournament.id %>/update">
-  <div>
-    <label for="location">location</label><br />
-    <input id="location" name="location" value="<%= @tournament.location  %>" type="text" />
+  
+  <div class="container">
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Tournament Title" name="title">
+      </div><!-- /input-group -->
+    </div><!-- /.col-lg-6 -->
+
+    <div class="col-lg-3">
+      <div class="input-group">
+        <span class="input-group-addon">
+          <input type="checkbox" name="paid">
+        </span>
+        <input class="form-control" placeholder="Paid?">  
+      </div><!-- /input-group -->
+    </div><!-- /.col-lg-3 -->
+
+    <div class="col-lg-3">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Confirmation #" name="confirmation">
+      </div><!-- /input-group -->
+    </div><!-- /.col-lg-3 -->
+   </div><!-- /.row --> 
+    </div>
+
+    <br>
+    <br>
+
+  <div class="container">
+    <div class="row">
+     <div class="col-lg-4">
+       <div class="input-group">
+        <input type="text" class="form-control" placeholder="Type Event(s)" name="events">
+      </div><!-- /input-group -->
+     </div><!-- /col-lg-4 -->
+
+      <div class="col-lg-4">
+
+     </div><!-- /col-lg-4 -->
+
+      <div class="col-lg-4">
+       <div class="input-group">
+        <input type="text" class="form-control" placeholder="Month/Day/Year">
+      </div><!-- /input-group -->
+     </div><!-- /col-lg-4 -->
+   </div><!-- /.row -->
+    </div>
+
+  <br>
+
+    <div class="container">
+      <div class="row">
+     <div class="col-lg-4">
+       <div class="input-group">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button"> + </button>
+        </span>
+        <input type="text" class="form-control" placeholder="Additional Events">
+      </div><!-- /input-group -->
+     </div>
+
+      <div class="col-lg-4">
+
+     </div>
+
+  
+        
+      <div class="col-lg-4">
+       <div class="input-group">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button"> + </button>
+        </span>
+        <input type="text" class="form-control" placeholder="Additional Dates">
+      </div><!-- /input-group -->
+     </div>
+   </div><!-- /.row -->
+    </div>
+
+    <br>
+    <br>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Type Address Here" style='width: 500px;'>
+          </div><!-- /input-group -->
+        </div>
+       </div>
+      </div>
+
+    <br>
+    <br>
+
+    <div class="container">
+    <div class="input-group">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button" id="hotel_show"> + Hotel</button>
+        </span>
+      </div><!-- /input-group -->
+      <div class="input-group">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button" id="hotel_hide"> - Hotel</button>
+        </span>
+      </div><!-- /input-group -->
+    </div>
+  
+  <!--************ HOTEL FORM ************** -->
+  
+  <div id = "hotel_form">
+  <div class="container">
+  <div class="row">
+    
+    <div class="page-header">
+      <h2>Hotel</h2>
+    </div>
+
+    <div class="col-lg-4">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="name">
+      </div><!-- /input-group -->
+    </div>
+
+    <div class="col-lg-4">
+      <div class="input-group">
+        <span class="input-group-addon">
+          <input type="checkbox">
+        </span>
+        <input type="text" class="form-control" placeholder="Paid">  
+      </div><!-- /input-group -->
+    </div><!-- /.col-lg-3 -->
+    
+     <div class="col-lg-4">
+       <div class="input-group">
+         <input type="text" class="form-control" placeholder="Confirmation #">
+       </div><!-- /input-group -->
+     </div><!-- /.col-lg-3 -->
+    
   </div>
-  <div>
-    <label for="date">date</label><br />
-    <input id="date" name="date" value="<%= @tournament.date  %>" type="text" />
+ </div>
+  
+  <br>
+  
+  <div class="container">
+    <div class="row">
+
+       <div class="col-lg-6">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="date">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-3 -->
+
+
+       <div class="col-lg-6">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="reservation #">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-3 -->
+    </div>
+    
+    <br>
+          
+  <div class="container">
+    <div class="row">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="address" style='width:500px'>
+      </div><!-- /input-group -->
+    </div><!-- /.col-lg-3 -->
   </div>
-  <div>
-    <label for="hotel">hotel</label><br />
-    <input id="hotel" name="hotel" value="<%= @tournament.hotel  %>" type="text" />
   </div>
-  <div>
-    <label for="travel">travel</label><br />
-    <input id="travel" name="travel" value="<%= @tournament.travel  %>" type="text" />
+  
   </div>
-  <div>
-    <input type="submit">
+  <script>
+    $('#hotel_form').hide()
+    $('#hotel_hide').hide()
+    $('#hotel_show').click( function(){
+      $('#hotel_form').show()
+      $('#hotel_show').hide()
+      $('#hotel_hide').show()
+    });
+    
+    $('#hotel_hide').click( function(){
+      $('#hotel_form').hide()
+      $('#hotel_show').show()
+      $('#hotel_hide').hide()
+    });
+  </script>
+  
+  <!-- ******* END OF HOTEL FORM *********** -->
+  
+  
+  
+  <br>
+  <div class="container">
+    <div class="input-group">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button" id="travel_show"> + Travel</button>
+        </span>
+      </div><!-- /input-group -->
+    <div class="input-group">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button" id="travel_hide"> - Travel</button>
+        </span>
+      </div><!-- /input-group -->
   </div>
+  
+  <!-- ****************** travel form *************** -->
+
+  
+  <div id="travel_form">
+   <div class="container">
+  <div class="row">
+    
+    <div class="page-header">
+      <h2>Travel</h2>
+    </div>
+
+    <div class="col-md-3">
+    </div>
+    
+    <div class="col-md-3">
+    </div>
+    
+    <div class="col-lg-3">
+      <div class="input-group">
+        <span class="input-group-addon">
+          <input type="checkbox">
+        </span>
+        <input type="text" class="form-control" placeholder="Paid" style="width:200px">  
+      </div><!-- /input-group -->
+    </div><!-- /.col-lg-3 -->
+    
+     <div class="col-lg-3">
+       <div class="input-group">
+         <input type="text" class="form-control" placeholder="Confirmation #">
+       </div><!-- /input-group -->
+     </div><!-- /.col-lg-3 -->
+    
+  </div>
+ </div>
+  
+  <br>
+  <br>
+  <br>
+  
+  <div class="container">
+    <div class="row">
+
+      
+      <div class="col-lg-6">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Airline" style="width:400px">
+        </div><!-- /input-group -->
+      </div>
+      
+       <div class="col-lg-6">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="flight #" style="width:400px">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-3 -->
+     </div>
+   </div>
+    
+    <br>
+
+  <div class="container">
+    <div class="row">
+       <div class="col-lg-4">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="destination" style="width:450px">
+          </div><!-- /input-group -->
+        </div>
+    </div>
+  </div>
+ </div>
+  <script>
+    $('#travel_form').hide()
+    $('#travel_hide').hide()
+    $('#travel_show').click( function(){
+      $('#travel_form').show()
+      $('#travel_show').hide()
+      $('#travel_hide').show()
+    });
+    
+    $('#travel_hide').click( function(){
+      $('#travel_form').hide()
+      $('#travel_show').show()
+      $('#travel_hide').hide()
+    });
+  </script>
+  
+  
+  <!-- ****************** end  of travel form *************** -->
+  
+  
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="container">
+      <div class="row">
+      <p><a href="/create_tournament" class="btn btn-primary btn-lg" role="button">Update</a></p>
+      </div>
+    </div>
 </form>
-
-

@@ -11,12 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140804183941) do
+ActiveRecord::Schema.define(version: 20140808003150) do
 
   create_table "events", force: true do |t|
     t.string   "result"
     t.string   "weapons"
     t.string   "division"
+    t.integer  "tournament_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "hotels", force: true do |t|
+    t.string   "name"
+    t.string   "date"
+    t.string   "address"
+    t.boolean  "paid"
+    t.string   "confirmation"
+    t.string   "reservation"
     t.integer  "tournament_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -44,9 +56,19 @@ ActiveRecord::Schema.define(version: 20140804183941) do
     t.string   "title"
     t.boolean  "paid"
     t.string   "confirmation"
-    t.string   "type"
     t.string   "event"
     t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "travels", force: true do |t|
+    t.boolean  "paid"
+    t.string   "confirmation"
+    t.string   "airline"
+    t.string   "flight"
+    t.string   "destination"
+    t.integer  "tournament_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
