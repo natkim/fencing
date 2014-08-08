@@ -1,6 +1,7 @@
-  <div class="container">
+ 
+<div class="container">
     <div class="page-header">
-      <h1><%= @tournament.title %> <small><%= @tournament.location %> | <%= @tournament.date %></small></h1>
+      <h1><%= @tournament.title %> <small><%= @tournament.location %> </small></h1>
     </div>
 
       <div class="caption">
@@ -15,19 +16,25 @@
 
       <div class="caption">
         <h3>Event(s):</h3>
-        <h4><%= @tournament.event %></h4>
+        <h4><%= @tournament.event %> - <%= @tournament.date %></h4>
+        <h4><%= @tournament.additional_event %> - <%= @tournament.additional_date %></h4>
       </div>
+  <br />
+      <div>
+        <h4>Hotel:</h4><br />
+        <p><%= @tournament.hotel %></p>
+      </div>
+      <div>
+        <h4>Travel:</h4><br />
+        <p><%= @tournament.travel %></p>
+      </div>
+  
+      <a href="/tournaments/<%= @tournament.id %>/edit">Edit</a> |
+      <a href="/tournaments/<%= @tournament.id %>/destroy">Destroy</a> |
+      <a href="/tournaments">Your Tournaments</a>
+  
   </div>
 
-<div>
-  <strong>Hotel</strong>:<br />
-  <p><%= @tournament.hotel %></p>
-</div>
-<div>
-  <strong>Travel</strong>:<br />
-  <p><%= @tournament.travel %></p>
-</div>
 
-<a href="/tournaments/<%= @tournament.id %>/edit">Edit</a> |
-<a href="/tournaments/<%= @tournament.id %>/destroy">Destroy</a> |
-<a href="/tournaments">You're Tournaments</a>
+
+

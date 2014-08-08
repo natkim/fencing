@@ -4,50 +4,54 @@
 <br>
 <form action="/create_tournament">
   
- <div class="container">
+</form>
+
+
+<form action="/create_tournament">
+  
+  <div class="container">
   <div class="row">
-    
     <div class="col-lg-6">
       <div class="input-group">
-        <input type="text" class="form-control" placeholder="Tournament Title" name="title">
+        <input type="text" class="form-control" placeholder="Tournament Title" name="title" id="title">
       </div><!-- /input-group -->
     </div><!-- /.col-lg-6 -->
 
     <div class="col-lg-3">
       <div class="input-group">
         <span class="input-group-addon">
-          <input type="checkbox" name="paid">
+          <input type="checkbox" id="paid">
         </span>
-        <h4>Paid?</h4>  
+        <input class="form-control" placeholder="Paid?" name='paid'>  
       </div><!-- /input-group -->
     </div><!-- /.col-lg-3 -->
 
     <div class="col-lg-3">
       <div class="input-group">
-        <input type="text" class="form-control" placeholder="Confirmation #" name="confirmation">
+        <input type="text" class="form-control" placeholder="Confirmation #" name='confirmation' id="confirmation">
       </div><!-- /input-group -->
-    </div><!-- /.col-lg-6 -->
+    </div><!-- /.col-lg-3 -->
    </div><!-- /.row --> 
-  </div>
+    </div>
 
     <br>
     <br>
 
   <div class="container">
     <div class="row">
-      
      <div class="col-lg-4">
        <div class="input-group">
-         <input type="text" class="form-control" placeholder="Type Event(s)" name="event">
-       </div><!-- /input-group -->
+        <input type="text" class="form-control" placeholder="Type Event(s)" name="event" id="event">
+      </div><!-- /input-group -->
      </div><!-- /col-lg-4 -->
 
       <div class="col-lg-4">
-      </div><!-- /col-lg-4 -->
+
+     </div><!-- /col-lg-4 -->
 
       <div class="col-lg-4">
        <div class="input-group">
-        <input type="text" class="form-control" placeholder="Month/Day/Year" name="date">
+        <input type="text" class="form-control" placeholder="Month/Day/Year" name="date"id="date">
       </div><!-- /input-group -->
      </div><!-- /col-lg-4 -->
    </div><!-- /.row -->
@@ -55,35 +59,33 @@
 
   <br>
 
-  <div class="container">
-    <div class="row">
+    <div class="container">
+      <div class="row">
+     <div class="col-lg-4">
+       <div class="input-group">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button"> + </button>
+        </span>
+        <input type="text" class="form-control" placeholder="Additional Events" name="additional_event" id="additional_event">
+      </div><!-- /input-group -->
+     </div>
+
+      <div class="col-lg-4">
+
+     </div>
+
+  
         
-       <div class="col-lg-4">
-         <div class="input-group">
-          <span class="input-group-btn">
-            <button class="btn btn-default" type="button"> + </button>
-          </span>
-          <input type="text" class="form-control" placeholder="Additional Events" name="event">
-        </div><!-- /input-group -->
-       </div>
-
-        <div class="col-lg-4">
-
-       </div>
-
-
-
-        <div class="col-lg-4">
-         <div class="input-group">
-          <span class="input-group-btn">
-            <button class="btn btn-default" type="button"> + </button>
-          </span>
-          <input type="text" class="form-control" placeholder="Additional Dates" name="date">
-        </div><!-- /input-group -->
-       </div>
-      
-    </div><!-- /.row -->
-  </div>
+      <div class="col-lg-4">
+       <div class="input-group">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button"> + </button>
+        </span>
+        <input type="text" class="form-control" placeholder="Additional Dates">
+      </div><!-- /input-group -->
+     </div>
+   </div><!-- /.row -->
+    </div>
 
     <br>
     <br>
@@ -92,7 +94,7 @@
       <div class="row">
         <div class="col-md-6">
           <div class="input-group">
-            <input type="text" class="form-control" placeholder="Type Address Here" style='width: 500px;' name="address">
+            <input type="text" class="form-control" placeholder="Type Address Here" style='width: 500px;'>
           </div><!-- /input-group -->
         </div>
        </div>
@@ -126,14 +128,14 @@
 
     <div class="col-lg-4">
       <div class="input-group">
-        <input type="text" class="form-control" placeholder="name" name="name">
+        <input type="text" class="form-control" placeholder="name">
       </div><!-- /input-group -->
     </div>
 
     <div class="col-lg-4">
       <div class="input-group">
         <span class="input-group-addon">
-          <input type="checkbox" name="paid">
+          <input type="checkbox">
         </span>
         <input type="text" class="form-control" placeholder="Paid">  
       </div><!-- /input-group -->
@@ -141,7 +143,7 @@
     
      <div class="col-lg-4">
        <div class="input-group">
-         <input type="text" class="form-control" placeholder="Confirmation #" name="confirmation">
+         <input type="text" class="form-control" placeholder="Confirmation #">
        </div><!-- /input-group -->
      </div><!-- /.col-lg-3 -->
     
@@ -155,14 +157,14 @@
 
        <div class="col-lg-6">
           <div class="input-group">
-            <input type="text" class="form-control" placeholder="date" name="date">
+            <input type="text" class="form-control" placeholder="date">
           </div><!-- /input-group -->
         </div><!-- /.col-lg-3 -->
 
 
        <div class="col-lg-6">
           <div class="input-group">
-            <input type="text" class="form-control" placeholder="reservation #" name="reservation">
+            <input type="text" class="form-control" placeholder="reservation #">
           </div><!-- /input-group -->
         </div><!-- /.col-lg-3 -->
     </div>
@@ -172,7 +174,7 @@
   <div class="container">
     <div class="row">
       <div class="input-group">
-        <input type="text" class="form-control" placeholder="address" style='width:500px' name="address">
+        <input type="text" class="form-control" placeholder="address" style='width:500px'>
       </div><!-- /input-group -->
     </div><!-- /.col-lg-3 -->
   </div>
@@ -230,7 +232,7 @@
     <div class="col-lg-4">
       <div class="input-group">
         <span class="input-group-addon">
-          <input type="checkbox" name="paid">
+          <input type="checkbox">
         </span>
         <input type="text" class="form-control" placeholder="Paid">  
       </div><!-- /input-group -->
@@ -238,7 +240,7 @@
     
      <div class="col-lg-4">
        <div class="input-group">
-         <input type="text" class="form-control" placeholder="Confirmation #" name="confirmation">
+         <input type="text" class="form-control" placeholder="Confirmation #">
        </div><!-- /input-group -->
      </div><!-- /.col-lg-3 -->
     
@@ -255,13 +257,13 @@
       
       <div class="col-lg-6">
         <div class="input-group">
-          <input type="text" class="form-control" placeholder="Airline" style="width:400px" name="airline">
+          <input type="text" class="form-control" placeholder="Airline" style="width:400px">
         </div><!-- /input-group -->
       </div>
       
        <div class="col-lg-6">
           <div class="input-group">
-            <input type="text" class="form-control" placeholder="flight #" style="width:400px" name="flight">
+            <input type="text" class="form-control" placeholder="flight #" style="width:400px">
           </div><!-- /input-group -->
         </div><!-- /.col-lg-3 -->
      </div>
@@ -273,7 +275,7 @@
     <div class="row">
        <div class="col-lg-4">
           <div class="input-group">
-            <input type="text" class="form-control" placeholder="destination" style="width:450px" name="destination">
+            <input type="text" class="form-control" placeholder="destination" style="width:450px">
           </div><!-- /input-group -->
         </div>
     </div>
@@ -306,7 +308,7 @@
 
     <div class="container">
       <div class="row">
-      <p><input type="submit" value="Submit"></p>
+        <input type="submit" class="btn btn-primary btn-lg" role="button" value="Add">
       </div>
     </div>
 </form>

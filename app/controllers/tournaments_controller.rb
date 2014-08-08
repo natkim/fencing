@@ -18,6 +18,8 @@ class TournamentsController < ApplicationController
     @tournament.paid = params[:paid]
     @tournament.location = params[:location]
     @tournament.date = params[:date]
+    @tournament.additional_event = params[:additional_event]
+    @tournament.additional_date = params[:additional_date]
     @tournament.event = params[:event]
     @tournament.hotel = params[:hotel]
     @tournament.travel = params[:travel]
@@ -41,6 +43,8 @@ class TournamentsController < ApplicationController
     @tournament.paid = params[:paid]
     @tournament.confirmation = params[:confirmation]
     @tournament.event = params[:event]
+    @tournament.additional_event = params[:additional_event]
+    @tournament.additional_date = params[:additional_date]
     @tournament.hotel = params[:hotel]
     @tournament.travel = params[:travel]
 

@@ -15,10 +15,9 @@
     <div class="col-sm-6 col-md-4">
       <div class="thumbnail">
         <div class="caption">
-          <h3><td><a href="/tournaments/<%= tournament.id %>/edit"><%= tournament.title %></a></td></h3>
+          <h3><td><a href="/tournaments/<%= tournament.id %>"><%= tournament.title %></a></td></h3>
           <p>Location: <td><%= tournament.location %></td></p>
           <p>Date: <td><%= tournament.date %></td></p>
-          <p><a href="/tournaments/<%= tournament.id %>" class="btn btn-primary" role="button">View</a></p>
           <td><a href="/tournaments/<%= tournament.id %>/destroy">Destroy</a></td>
         </div>
       </div>
